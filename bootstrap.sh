@@ -9,3 +9,4 @@ bash /vagrant/provision/mysql.sh
 bash /vagrant/provision/apache.sh
 bash /vagrant/provision/phpmyadmin.sh
 bash /vagrant/provision/env.sh
+bash /vagrant/provision/nodejs.sh
