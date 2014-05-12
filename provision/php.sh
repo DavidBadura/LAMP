@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-apt-get install -y php5 php5-mysql php5-curl php5-xdebug
+apt-get install -y php5 php5-mysql php5-curl php5-xdebug php-pear
+
+pear install PHP_CodeSniffer
