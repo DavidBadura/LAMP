@@ -18,6 +18,8 @@ Features
 Overview
 --------
 
+| Key | Value |
+| --- | ----- |
 | IP-Address | 192.168.13.37 |
 | User | vagrant |
 | Password | vagrant |
