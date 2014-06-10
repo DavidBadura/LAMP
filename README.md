@@ -14,6 +14,7 @@ Features
 * nodejs
 * git
 * composer
+* vim
 
 Overview
 --------
@@ -23,6 +24,23 @@ Overview
 | IP-Address | 192.168.13.37 |
 | User | vagrant |
 | Password | vagrant |
+
+Samba
+-----
+
+| Key | Value |
+| --- | ----- |
+| Samba Freigabe | \\192.168.13.37\www |
+| User | vagrant |
+| Password | vagrant |
+
+Führe im Windows-Explorer folgende Datei aus `sambawin.cmd` um automatisch die Samba Freigabe hinzuzufügen.
+
+Vim
+---
+
+Leider kann die vim Konfiguration nicht automatisch installiert werden.
+Um die vim konfiguration zu installieren führe einfach diesen befehl `bash ./vim_install.sh` im home Verzeichnis aus.
 
 TODO
 ----

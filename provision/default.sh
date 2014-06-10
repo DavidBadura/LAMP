@@ -2,5 +2,5 @@
 
 chown vagrant:vagrant /home/vagrant -Rf
 
-apt-get install -y vim git tree
+apt-get install -y vim git tree ctags
 
