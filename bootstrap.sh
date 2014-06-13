@@ -34,5 +34,10 @@ if $CONFIG_ENABLE_ZSH; then
 	bash /vagrant/provision/zsh.sh
 fi
 
-bash /vagrant/provision/env.sh
+bash /vagrant/provision/sync.sh
+
+if [[ -f /vagrant/local.sh ]]; then
+	bash /vagrant/local.sh
+fi
+
 bash /vagrant/provision/cleanup.sh
