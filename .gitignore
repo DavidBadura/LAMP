@@ -1,3 +1,4 @@
 .vagrant/
 config.sh
 local/
+local.sh
