@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$HOME/node_modules/.bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
