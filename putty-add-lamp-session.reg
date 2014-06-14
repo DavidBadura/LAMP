@@ -1,6 +1,11 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\lamp]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\LAMP]
+"HostName"="vagrant@127.0.0.1"
+"Protocol"="ssh"
+"PortNumber"=dword:000008ae
+"Beep"=dword:00000000
+"BeepInd"=dword:00000000
 "Colour0"="131,148,150"
 "Colour1"="147,161,161"
 "Colour2"="0,43,54"
