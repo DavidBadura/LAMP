@@ -26,6 +26,10 @@ if $CONFIG_ENABLE_NODEJS; then
 	bash /vagrant/provision/nodejs.sh
 fi
 
+if $CONFIG_ENABLE_RUBY; then
+    bash /vagrant/provision/ruby.sh
+fi
+
 if $CONFIG_ENABLE_SAMBA; then
 	bash /vagrant/provision/samba.sh
 fi
