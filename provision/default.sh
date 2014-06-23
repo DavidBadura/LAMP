@@ -2,5 +2,4 @@
 
 chown vagrant:vagrant /home/vagrant -Rf
 
-apt-get install -y vim git tree ctags zip unzip
-
+apt-get install -y vim git tree ctags zip unzip ack-grep

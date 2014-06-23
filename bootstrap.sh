@@ -38,6 +38,10 @@ if $CONFIG_ENABLE_ZSH; then
 	bash /vagrant/provision/zsh.sh
 fi
 
+if $CONFIG_ENABLE_HHVM; then
+	bash /vagrant/provision/hhvm.sh
+fi
+
 bash /vagrant/provision/sync.sh
 
 if [[ -f /vagrant/local.sh ]]; then
