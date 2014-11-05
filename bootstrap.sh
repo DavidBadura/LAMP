@@ -8,6 +8,7 @@ if [[ ! -f /vagrant/config.sh ]]; then
 	cp /vagrant/config.sh-dist /vagrant/config.sh
 fi
 
+bash /vagrant/config.sh-dist
 bash /vagrant/config.sh
 bash /vagrant/provision/default.sh
 bash /vagrant/provision/php.sh
@@ -39,6 +40,10 @@ if $CONFIG_ENABLE_ZSH; then
 fi
 
 if $CONFIG_ENABLE_HHVM; then
+	bash /vagrant/provision/hhvm.sh
+fi
+
+if $CONFIG_ENABLE_DOCKER; then
 	bash /vagrant/provision/hhvm.sh
 fi
 
