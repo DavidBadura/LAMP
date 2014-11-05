@@ -44,7 +44,7 @@ if $CONFIG_ENABLE_HHVM; then
 fi
 
 if $CONFIG_ENABLE_DOCKER; then
-	bash /vagrant/provision/hhvm.sh
+	bash /vagrant/provision/docker.sh
 fi
 
 bash /vagrant/provision/sync.sh
