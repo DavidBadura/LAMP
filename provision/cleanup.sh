@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 chown vagrant:vagrant /home/vagrant -Rf
-
 apt-get autoremove -y
 
-service apache2 restart
+echo "== cleanup =="
+for command in "${cleanup[@]}"
+do
+	echo "$command"
+	eval "$command"
+done
