@@ -11,8 +11,6 @@ Vagrant.configure("2") do |config|
   config.ssh.private_key_path = "ssh/id_rsa"
   config.ssh.forward_agent = true
   config.ssh.password = "vagrant"
-  
-  config.vm.network "forwarded_port", guest: 10080, host: 10080
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
