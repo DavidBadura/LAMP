@@ -14,4 +14,4 @@ a2enmod rewrite
 
 service apache2 start
 
-cleanup=("${cleanup[@]}" "service apache restart")
+cleanup=("${cleanup[@]}" "service apache2 restart")
