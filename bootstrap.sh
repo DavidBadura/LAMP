@@ -8,49 +8,51 @@ if [[ ! -f /vagrant/config.sh ]]; then
 	cp /vagrant/config.sh-dist /vagrant/config.sh
 fi
 
-bash /vagrant/config.sh-dist
-bash /vagrant/config.sh
-bash /vagrant/provision/default.sh
-bash /vagrant/provision/php.sh
-bash /vagrant/provision/mysql.sh
-bash /vagrant/provision/apache.sh
+cleanup=()
+
+source /vagrant/config.sh-dist
+source /vagrant/config.sh
+source /vagrant/provision/default.sh
+source /vagrant/provision/php.sh
+source /vagrant/provision/mysql.sh
+source /vagrant/provision/apache.sh
 
 if $CONFIG_ENABLE_PHPMYADMIN; then
-	bash /vagrant/provision/phpmyadmin.sh
+	source /vagrant/provision/phpmyadmin.sh
 fi
 
 if $CONFIG_ENABLE_COMPOSER; then
-	bash /vagrant/provision/composer.sh
+	source /vagrant/provision/composer.sh
 fi
 
 if $CONFIG_ENABLE_NODEJS; then
-	bash /vagrant/provision/nodejs.sh
+	source /vagrant/provision/nodejs.sh
 fi
 
 if $CONFIG_ENABLE_RUBY; then
-    bash /vagrant/provision/ruby.sh
+    source /vagrant/provision/ruby.sh
 fi
 
 if $CONFIG_ENABLE_SAMBA; then
-	bash /vagrant/provision/samba.sh
+	source /vagrant/provision/samba.sh
 fi
 
 if $CONFIG_ENABLE_ZSH; then
-	bash /vagrant/provision/zsh.sh
+	source /vagrant/provision/zsh.sh
 fi
 
 if $CONFIG_ENABLE_HHVM; then
-	bash /vagrant/provision/hhvm.sh
+	source /vagrant/provision/hhvm.sh
 fi
 
 if $CONFIG_ENABLE_DOCKER; then
-	bash /vagrant/provision/docker.sh
+	source /vagrant/provision/docker.sh
 fi
 
-bash /vagrant/provision/sync.sh
+source /vagrant/provision/sync.sh
 
 if [[ -f /vagrant/local.sh ]]; then
 	bash /vagrant/local.sh
 fi
 
-bash /vagrant/provision/cleanup.sh
+source /vagrant/provision/cleanup.sh
