@@ -52,7 +52,7 @@ fi
 source /vagrant/provision/sync.sh
 
 if [[ -f /vagrant/local.sh ]]; then
-	bash /vagrant/local.sh
+	source /vagrant/local.sh
 fi
 
 source /vagrant/provision/cleanup.sh
