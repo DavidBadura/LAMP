@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
   config.ssh.password = "vagrant"
 
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 3001, host: 3001
+
   for i in 64000..64010
     config.vm.network :forwarded_port, guest: i, host: i
   end
