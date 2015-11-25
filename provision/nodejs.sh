@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-apt-get install -y nodejs npm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 
-ln -s /usr/bin/nodejs /usr/bin/node
+source /root/.nvm/nvm.sh
+nvm install 5
 
-npm install jslint csslint bower grunt-cli
+mv /root/.nvm /home/vagrant/.nvm
+
+echo 'export NVM_DIR="/home/vagrant/.nvm"' >> /home/vagrant/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> /home/vagrant/.zshrc
