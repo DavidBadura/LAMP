@@ -16,40 +16,13 @@ source /vagrant/provision/default.sh
 source /vagrant/provision/php.sh
 source /vagrant/provision/mysql.sh
 source /vagrant/provision/apache.sh
-
-if $CONFIG_ENABLE_PHPMYADMIN; then
-	source /vagrant/provision/phpmyadmin.sh
-fi
-
-if $CONFIG_ENABLE_COMPOSER; then
-	source /vagrant/provision/composer.sh
-fi
-
-if $CONFIG_ENABLE_NODEJS; then
-	source /vagrant/provision/nodejs.sh
-fi
-
-if $CONFIG_ENABLE_RUBY; then
-    source /vagrant/provision/ruby.sh
-fi
-
-if $CONFIG_ENABLE_SAMBA; then
-	source /vagrant/provision/samba.sh
-fi
-
-if $CONFIG_ENABLE_ZSH; then
-	source /vagrant/provision/zsh.sh
-fi
-
-if $CONFIG_ENABLE_HHVM; then
-	source /vagrant/provision/hhvm.sh
-fi
-
-if $CONFIG_ENABLE_DOCKER; then
-	source /vagrant/provision/docker.sh
-fi
-
+source /vagrant/provision/phpmyadmin.sh
+source /vagrant/provision/composer.sh
+source /vagrant/provision/samba.sh
+source /vagrant/provision/zsh.sh
+source /vagrant/provision/docker.sh
 source /vagrant/provision/sync.sh
+source /vagrant/provision/nodejs.sh
 
 if [[ -f /vagrant/local.sh ]]; then
 	source /vagrant/local.sh

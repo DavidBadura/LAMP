@@ -46,6 +46,5 @@ TODO
 ----
 
 * generate ssh keys
-* configurable system
 * own bashrc
 * own vimrc

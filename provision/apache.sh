@@ -13,5 +13,3 @@ sed -i.bak 's/export APACHE_RUN_GROUP=www-data/export APACHE_RUN_GROUP=vagrant/g
 a2enmod rewrite
 
 service apache2 start
-
-cleanup=("${cleanup[@]}" "service apache2 restart")
